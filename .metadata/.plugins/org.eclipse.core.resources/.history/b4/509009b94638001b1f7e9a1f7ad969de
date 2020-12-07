@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li><a href = "index.jspsection=A"></a></li>
+		<li><a href = "index.jspsection=B"></a></li>
+		<li><a href = "index.jspsection=C"></a></li>
+	</ul>
+	
+	<%=String section = request.getParameter("section") != null ? request.getParameter("section") : "";
+	
+			switch(srction) {
+			case "A" :
+			%><%@include file="page/a.jpg" %><%
+			break;
+			case "B" : 
+			%><%@include file="page/b.jpg" %><%
+			break;
+			%><%@include file="page/c.jpg" %><%
+			break;
+			default:
+				out.println("메인 페이지입니다")
+				
+			}
+	%>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

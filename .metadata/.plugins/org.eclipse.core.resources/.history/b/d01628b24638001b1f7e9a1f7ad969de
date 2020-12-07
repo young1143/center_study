@@ -1,0 +1,24 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+	<ul>
+		<li><a href = "index.jspsection=A"></a></li>
+		<li><a href = "index.jspsection=B"></a></li>
+		<li><a href = "index.jspsection=C"></a></li>
+	</ul>
+	
+	<%=request.getParameter("section") != null ?
+	
+			switch(srction) {
+			case "A" :
+				
+			}
+	%>
+</body>
+</html>
