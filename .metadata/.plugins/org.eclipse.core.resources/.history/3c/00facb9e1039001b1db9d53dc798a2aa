@@ -1,0 +1,63 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<h3>판매등록</h3>
+
+ <%
+        try {
+            Class.forName("oracle.jdbc.OracleDriver");
+            Connection conn = DriverManager.getConnection
+                                ("jdbc:oracle:thin:@//localhost:1521/xe", "order_admin", "order_password");
+            
+         
+            Statement stmt = conn.createStatement();
+ 
+            
+            
+            
+            ResultSet rs = stmt.executeQuery("SELECT SYSTEM, 10 FROM DUAL");
+
+            while (rs.next()) {
+            	
+            }
+            %>
+
+            
+
+
+
+		</tr>
+		<tr>
+			<td>수량</td>
+			<td><input type="number" name="amount"></td>
+		</tr>
+		<tr>
+			<td>판매 날짜</td>
+			<td><input type="button" name="puchase_date"></td>
+		</tr>
+		<tr>
+			<td conspan="2">
+				<input type="submit" value="등록하기">
+				<input type="button" value="다시쓰기" onclick="reset_form()">
+				
+			</td>
+		</tr>
+		
+	
+	</table> 
+
+</form>
+
+<script>
+function reset_form(){
+	document.action_form.reset();
+}
+	<%
+stmt.close();
+conn.close();
+}
+catch (Exception e) {
+e.printStackTrace();
+}
+%>
+
+</script>

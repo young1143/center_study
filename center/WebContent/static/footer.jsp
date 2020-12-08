@@ -1,0 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<footer>
+	<h3>Copyright @! 2020 All right reserved CJH</h3>
+</footer>
