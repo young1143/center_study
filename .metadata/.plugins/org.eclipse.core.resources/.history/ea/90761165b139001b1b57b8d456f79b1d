@@ -22,9 +22,7 @@
     <tr>
         <td>판매한 상품</td>
         <td><select name="product_id">
-           <option value="0">값을 선택해주세요</option>
             <%
-           
              String query = "SELECT PRODUCT_ID, NAME FROM PRODUCT";
             ResultSet rs = stmt.executeQuery(query);
 
@@ -54,23 +52,7 @@
 
 <script>
 function submit_form(){
-	if (document.action_form.amunt.value === ""){
-		alert("수량을 입력해 주세요");
-		return;
-	}
-	if(document.action_form.purchase_date.value === ""){
-		alert("날짜를 입력해 주세요");
-		document.action_form.amount.focus();
-		return;
-	}
 	
-	if(document.action_form.product_id.selectedIndex === 0){
-		alert("판매상품을 선택하여 주세요");
-		document.action_form.product_id.focus();
-		return;
-	}
-	alert("등록을 하겠습니다")
-	document.action_form.submit()
 	
 }
 
